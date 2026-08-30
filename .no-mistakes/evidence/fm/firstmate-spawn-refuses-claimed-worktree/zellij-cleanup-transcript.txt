@@ -1,0 +1,37 @@
+================================================================================
+ fm-spawn claim refusal on the zellij backend
+ The pane->tab lookup fails transiently mid-spawn; the refusal must still retire
+ the TAB (the name a retry collides on), not just the pane.
+================================================================================
+
+$ fm-spawn.sh search-fix /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-zj-evidence.Q1ytN2/acme codex --backend zellij --mode no-mistakes --yolo off
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-zj-evidence.Q1ytN2/home/data/search-fix/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-zj-evidence.Q1ytN2/pool/wt1' is already claimed by task docs-sweep in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-zj-evidence.Q1ytN2/home/state/docs-sweep.meta; refusing to launch task search-fix. That record claims the worktree; it does not prove a live worker. If docs-sweep has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.
+exit status: 1
+
+$ grep -E "new-tab|close-tab-by-id|close-pane|list-panes" $FM_ZJ_REC
+zellij --session firstmate action new-tab --cwd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-zj-evidence.Q1ytN2/acme --name fm-firstmate-bd1f92e2-search-fix
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action list-panes --json
+zellij --session firstmate action close-tab-by-id 4
+
+# -> the tab it created (id 4) was closed by id; close-pane was never used,
+#    so no empty tab named fm-search-fix survives to refuse the retry.
+
+$ zellij -s firstmate action query-tab-names   # live tab inventory after the refusal
+[]
+
+$ fm_backend_endpoint_blocks_respawn zellij firstmate:7 fm-firstmate-bd1f92e2-search-fix
+blocks respawn: NO  (the slot is retryable as-is)
+
+============================== end of transcript ===============================

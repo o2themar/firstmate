@@ -1,0 +1,94 @@
+================================================================================
+ fm-spawn durable worktree-claim guard - operator transcript
+ backend: tmux (recording fake)   project: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme
+ pool worktrees: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1 (claimed)  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt2 (free)  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt3 (task auth-relaunch's own)
+================================================================================
+
+# Existing crewmate 'auth-fix' durably records pool slot wt1 - through a
+
+# symlink with a trailing slash, to show path canonicalization.
+
+$ cat $FM_HOME/state/auth-fix.meta
+window=firstmate:fm-auth-fix
+endpoint_task_id=auth-fix
+worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1-alias/
+project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme
+harness=codex
+kind=ship
+
+# 1) Treehouse hands the SAME slot (real path, no trailing slash) to a new
+
+#    task 'auth'. The guard refuses before any branch creation or launch.
+
+$ fm-spawn.sh auth /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme codex --mode no-mistakes --yolo off
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/auth/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1' is already claimed by task auth-fix in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/state/auth-fix.meta; refusing to launch task auth. That record claims the worktree; it does not prove a live worker. If auth-fix has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.
+exit status: 1
+
+$ ls $FM_HOME/state/
+auth-fix.meta
+
+# -> no auth.meta: the refused contender published no durable record.
+
+$ grep -E 'new-window|kill-window|send-keys' $FM_TMUX_REC
+tmux new-window -dP -F #{window_id} -t firstmate: -n fm-auth -c /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-claim-evidence.x1cwvt/acme
+tmux send-keys -t @spawnwid treehouse get Enter
+tmux kill-window -t =firstmate:=fm-auth
+
+# -> the endpoint it created was retired; no agent launch was ever typed.
+
+# 2) Retry the SAME task into the SAME slot - no manual cleanup in between.
+
+#    It is refused again (the claim still stands), not by a leftover window.
+
+$ fm-spawn.sh auth /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme ... (retry)
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/auth/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1' is already claimed by task auth-fix in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/state/auth-fix.meta; refusing to launch task auth. That record claims the worktree; it does not prove a live worker. If auth-fix has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.
+exit status: 1
+
+# 3) The owner finished but its teardown aborted, leaving the record behind.
+
+#    The operator removes the record the refusal named, then retries.
+
+$ rm $FM_HOME/state/auth-fix.meta && fm-spawn.sh auth ...
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/auth/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned auth harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-auth worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1
+exit status: 0
+
+$ grep -c 'send-keys' $FM_TMUX_REC
+4
+
+# -> the slot was reusable with zero manual endpoint cleanup.
+
+# 4) A genuinely free pool slot is unaffected.
+
+$ fm-spawn.sh billing /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme ... (into /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt2)
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/billing/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned billing harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-billing worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt2
+exit status: 0
+
+# 5) --relaunch into the task's OWN recorded worktree stays allowed.
+
+$ fm-spawn.sh auth-relaunch --relaunch
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/auth-relaunch/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned auth-relaunch harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-auth-relaunch worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt3/
+exit status: 0
+
+# 6) When the best-effort backend close silently fails, the survivor is
+
+#    NAMED instead of being reported as a clean retirement.
+
+$ FM_FAKE_TMUX_KILL_NOOP=1 fm-spawn.sh stuck /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme ...
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/stuck/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1' is already claimed by task auth-fix in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/state/auth-fix.meta; refusing to launch task stuck. That record claims the worktree; it does not prove a live worker. If auth-fix has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.
+warning: the new tmux endpoint firstmate:fm-stuck named fm-stuck survived the refusal of claimed worktree '/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/pool/wt1'; retire it before retrying task stuck, or the next spawn will refuse the leftover fm-stuck
+exit status: 1
+
+#    and the named leftover is exactly what refuses the next attempt:
+
+$ fm-spawn.sh stuck /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/acme ... (next attempt)
+warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-claim-evidence.x1cwvt/home/data/stuck/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: window firstmate:fm-stuck already exists
+exit status: 1
+
+================================ end of transcript =============================
