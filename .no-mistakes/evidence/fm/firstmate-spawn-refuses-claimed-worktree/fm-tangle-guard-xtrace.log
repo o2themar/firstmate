@@ -1,0 +1,1156 @@
++ set -u
+++ dirname tests/fm-tangle-guard.test.sh
++ . tests/fixtures.sh
++++ dirname tests/fixtures.sh
+++ . tests/lib.sh
++++ '[' -n '' ']'
++++ FM_TEST_LIB_SOURCED=1
++++ export FM_GATE_REFUSE_BYPASS=1
++++ FM_GATE_REFUSE_BYPASS=1
++++++ dirname tests/lib.sh
+++++ cd tests/..
+++++ pwd
++++ ROOT=/Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9
++++ FM_TEST_CLEANUP_DIRS=()
+++++ mktemp /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//.fm-test-cleanup.81992.XXXXXX
++++ FM_TEST_CLEANUP_REGISTRY=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//.fm-test-cleanup.81992.VwckT8
+++++ fm_test_pid_identity 81992
+++++ local pid=81992
+++++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/
+++++ bash -c '. "$1"; fm_pid_identity "$2"' _ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-wake-lib.sh 81992
++++ FM_TEST_OWNER_IDENTITY='Tue Sep  1 18:19:31 2026     bash -x tests/fm-tangle-guard.test.sh'
++++ trap fm_test_cleanup EXIT
++++ trap 'fm_test_cleanup; exit 130' INT
++++ trap 'fm_test_cleanup; exit 143' TERM
++++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
++++ '[' 0 '!=' 1 ']'
++++ fm_test_reap_orphans
++++ local marker dir mtime now owner_pid owner_identity current_identity
+++++ date +%s
++++ now=1788301171
++++ for marker in '"${TMPDIR:-/tmp}"/fm-*/.fm-test-fixture'
++++ '[' -e /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-control-auth.xS7kvz/.fm-test-fixture ']'
+++++ sed -n 1p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-control-auth.xS7kvz/.fm-test-fixture
++++ owner_pid=56246
+++++ sed -n '2,$p' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-control-auth.xS7kvz/.fm-test-fixture
++++ owner_identity='Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh'
++++ case "$owner_pid" in
+++++ fm_test_pid_identity 56246
++++ current_identity='Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh'
++++ '[' -n 'Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh' ']'
++++ '[' 'Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh' = 'Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh' ']'
++++ continue
++++ for marker in '"${TMPDIR:-/tmp}"/fm-*/.fm-test-fixture'
++++ '[' -e /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-control-relaunch.TsSsWG/.fm-test-fixture ']'
+++++ sed -n 1p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-control-relaunch.TsSsWG/.fm-test-fixture
++++ owner_pid=56246
+++++ sed -n '2,$p' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-control-relaunch.TsSsWG/.fm-test-fixture
++++ owner_identity='Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh'
++++ case "$owner_pid" in
+++++ fm_test_pid_identity 56246
++++ current_identity='Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh'
++++ '[' -n 'Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh' ']'
++++ '[' 'Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh' = 'Tue Sep  1 18:18:47 2026     bash tests/fm-control-relaunch.test.sh' ']'
++++ continue
+++ '[' -n '' ']'
+++ FM_TEST_FIXTURES_SOURCED=1
+++ export FM_TEST_NO_MISTAKES_VERSION=1.46.0
+++ FM_TEST_NO_MISTAKES_VERSION=1.46.0
+++ export 'FM_TEST_NO_MISTAKES_FAKE_VERSION=no-mistakes version v1.46.0 (fake)'
+++ FM_TEST_NO_MISTAKES_FAKE_VERSION='no-mistakes version v1.46.0 (fake)'
+++ export 'FM_TEST_NO_MISTAKES_FAKE_VERSION_TS=no-mistakes version v1.46.0 (fake) 2026-06-27T00:02:18Z'
+++ FM_TEST_NO_MISTAKES_FAKE_VERSION_TS='no-mistakes version v1.46.0 (fake) 2026-06-27T00:02:18Z'
+++ export FM_TEST_GH_AXI_VERSION=0.1.29
+++ FM_TEST_GH_AXI_VERSION=0.1.29
++ . /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-tangle-lib.sh
+++ fm_test_tmproot fm-tangle-guard
+++ local prefix=fm-tangle-guard root
++++ mktemp -d /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.XXXXXX
+++ root=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB
+++ printf '%s\n%s\n' 81992 'Tue Sep  1 18:19:31 2026     bash -x tests/fm-tangle-guard.test.sh'
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB
++ TMP_ROOT=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB
++ fm_git_identity fmtest fmtest@example.invalid
++ export GIT_AUTHOR_NAME=fmtest GIT_AUTHOR_EMAIL=fmtest@example.invalid
++ GIT_AUTHOR_NAME=fmtest
++ GIT_AUTHOR_EMAIL=fmtest@example.invalid
++ export GIT_COMMITTER_NAME=fmtest GIT_COMMITTER_EMAIL=fmtest@example.invalid
++ GIT_COMMITTER_NAME=fmtest
++ GIT_COMMITTER_EMAIL=fmtest@example.invalid
++ test_lib_classification
++ local repo n=0 label state branch expect out
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/lib-repo.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/lib-repo.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
++ repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
++ IFS='|'
++ read -r label state branch expect
++ '[' -n 'on the default branch is healthy' ']'
++ n=1
++ case "$state" in
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo checkout -q main
+++ fm_primary_tangle_branch /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
+++ local root=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo cur default
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo rev-parse --is-inside-work-tree
++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo symbolic-ref --quiet --short HEAD
+++ cur=main
+++ '[' -n main ']'
++++ fm_default_branch /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
++++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo ref branch
+++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo symbolic-ref --quiet --short refs/remotes/origin/HEAD
+++++ true
++++ ref=
++++ '[' -n '' ']'
++++ for branch in main master
++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo show-ref --verify --quiet refs/heads/main
++++ printf '%s\n' main
++++ return 0
+++ default=main
+++ '[' main = main ']'
+++ return 1
+++ true
++ out=
++ '[' '' = '' ']'
++ IFS='|'
++ read -r label state branch expect
++ '[' -n 'on a feature branch is the tangle' ']'
++ n=2
++ case "$state" in
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo checkout -q -B fm/readme-restructure-d3
+++ fm_primary_tangle_branch /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
+++ local root=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo cur default
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo rev-parse --is-inside-work-tree
++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo symbolic-ref --quiet --short HEAD
+++ cur=fm/readme-restructure-d3
+++ '[' -n fm/readme-restructure-d3 ']'
++++ fm_default_branch /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
++++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo ref branch
+++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo symbolic-ref --quiet --short refs/remotes/origin/HEAD
+++++ true
++++ ref=
++++ '[' -n '' ']'
++++ for branch in main master
++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo show-ref --verify --quiet refs/heads/main
++++ printf '%s\n' main
++++ return 0
+++ default=main
+++ '[' fm/readme-restructure-d3 = main ']'
+++ printf '%s\n' fm/readme-restructure-d3
+++ return 0
++ out=fm/readme-restructure-d3
++ '[' fm/readme-restructure-d3 = fm/readme-restructure-d3 ']'
++ IFS='|'
++ read -r label state branch expect
++ '[' -n 'detached HEAD on default is healthy (worktrees, secondmate homes)' ']'
++ n=3
++ case "$state" in
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo checkout -q main
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo checkout -q --detach
+++ fm_primary_tangle_branch /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo
+++ local root=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo cur default
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo rev-parse --is-inside-work-tree
++++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/lib-repo symbolic-ref --quiet --short HEAD
++++ true
+++ cur=
+++ '[' -n '' ']'
+++ return 1
+++ true
++ out=
++ '[' '' = '' ']'
++ IFS='|'
++ read -r label state branch expect
+++ fm_primary_tangle_branch /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB
+++ local root=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB cur default
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB rev-parse --is-inside-work-tree
+++ return 1
+++ true
++ out=
++ '[' -z '' ']'
++ pass 'fm_primary_tangle_branch: feature branch alarms; default/detached/non-git stay silent'
++ printf 'ok - %s\n' 'fm_primary_tangle_branch: feature branch alarms; default/detached/non-git stay silent'
+ok - fm_primary_tangle_branch: feature branch alarms; default/detached/non-git stay silent
++ test_guard_banner
++ local repo out
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/guard-repo.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/guard-repo.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
++ repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ run_guard /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-guard.sh
++ out=
++ assert_not_contains '' 'WORKTREE TANGLE' 'guard alarmed while primary was on main'
++ case "$1" in
++ :
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo checkout -q --detach
+++ run_guard /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-guard.sh
++ out=
++ assert_not_contains '' 'WORKTREE TANGLE' 'guard alarmed on a detached HEAD (legitimate worktree state)'
++ case "$1" in
++ :
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo checkout -q -B fm/tangle-aa1
+++ run_guard /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-guard.sh
++ out='●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  Restore the primary to '\''main'\'':
+●      git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo checkout main
+●  then re-validate '\''fm/tangle-aa1'\'' in a proper isolated worktree.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
++ assert_contains '●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  Restore the primary to '\''main'\'':
+●      git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo checkout main
+●  then re-validate '\''fm/tangle-aa1'\'' in a proper isolated worktree.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' 'WORKTREE TANGLE' 'guard did not alarm on a feature branch in the primary'
++ case "$1" in
++ :
++ assert_contains '●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  Restore the primary to '\''main'\'':
+●      git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo checkout main
+●  then re-validate '\''fm/tangle-aa1'\'' in a proper isolated worktree.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' fm/tangle-aa1 'guard banner did not name the offending branch'
++ case "$1" in
++ :
++ assert_contains '●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  Restore the primary to '\''main'\'':
+●      git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo checkout main
+●  then re-validate '\''fm/tangle-aa1'\'' in a proper isolated worktree.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' 'checkout main' 'guard banner did not print the restore remediation'
++ case "$1" in
++ :
+++ FM_GUARD_READ_ONLY=1
+++ run_guard /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-guard.sh
++ out='●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  This read-only session must leave restore work to a session with verified fleet-lock ownership.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'
++ assert_contains '●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  This read-only session must leave restore work to a session with verified fleet-lock ownership.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' 'WORKTREE TANGLE' 'read-only guard did not keep the tangle alarm'
++ case "$1" in
++ :
++ assert_contains '●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  This read-only session must leave restore work to a session with verified fleet-lock ownership.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' 'read-only session must leave restore work' 'read-only guard did not explain restore ownership'
++ case "$1" in
++ :
++ assert_not_contains '●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WORKTREE TANGLE - PRIMARY CHECKOUT IS ON A FEATURE BRANCH
+●  /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/guard-repo is on '\''fm/tangle-aa1'\'', not its default branch '\''main'\''.
+●  A crewmate likely branched/committed in the primary instead of its own worktree.
+●  The work is SAFE on the '\''fm/tangle-aa1'\'' ref.
+●  This read-only session must leave restore work to a session with verified fleet-lock ownership.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━' 'checkout main' 'read-only guard printed a state-changing restore command'
++ case "$1" in
++ :
++ pass 'fm-guard: bordered tangle banner fires only for a feature branch and suppresses repair commands in read-only mode'
++ printf 'ok - %s\n' 'fm-guard: bordered tangle banner fires only for a feature branch and suppresses repair commands in read-only mode'
+ok - fm-guard: bordered tangle banner fires only for a feature branch and suppresses repair commands in read-only mode
++ test_bootstrap_line
++ local repo out
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/bootstrap-repo.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/bootstrap-repo.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
++ repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ run_bootstrap /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-bootstrap.sh
+++ grep '^TANGLE:'
+++ true
++ out=
++ '[' -z '' ']'
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo checkout -q --detach
+++ run_bootstrap /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-bootstrap.sh
+++ grep '^TANGLE:'
+++ true
++ out=
++ '[' -z '' ']'
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo checkout -q -B fm/tangle-bb2
+++ run_bootstrap /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-bootstrap.sh
+++ grep '^TANGLE:'
++ out='TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - restore the primary with: git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo checkout main, then re-validate the branch in a proper worktree'
++ assert_contains 'TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - restore the primary with: git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo checkout main, then re-validate the branch in a proper worktree' fm/tangle-bb2 'bootstrap did not report the tangled branch'
++ case "$1" in
++ :
++ assert_contains 'TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - restore the primary with: git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo checkout main, then re-validate the branch in a proper worktree' 'checkout main' 'bootstrap TANGLE line lacked the restore remediation'
++ case "$1" in
++ :
+++ FM_ROOT_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/bootstrap-repo
+++ FM_BOOTSTRAP_DETECT_ONLY=1
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-bootstrap.sh
+++ grep '^TANGLE:'
++ out='TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - read-only session must leave restore work to the session holding the fleet lock'
++ assert_contains 'TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - read-only session must leave restore work to the session holding the fleet lock' fm/tangle-bb2 'detect-only bootstrap did not report the tangled branch'
++ case "$1" in
++ :
++ assert_contains 'TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - read-only session must leave restore work to the session holding the fleet lock' 'read-only session must leave restore work' 'detect-only bootstrap did not explain restore ownership'
++ case "$1" in
++ :
++ assert_not_contains 'TANGLE: primary checkout on feature branch '\''fm/tangle-bb2'\'' (expected '\''main'\''); the work is safe on that ref - read-only session must leave restore work to the session holding the fleet lock' 'checkout main' 'detect-only bootstrap printed a state-changing restore command'
++ case "$1" in
++ :
++ pass 'fm-bootstrap: TANGLE problem line fires only for a feature branch and suppresses repair commands in detect-only mode'
++ printf 'ok - %s\n' 'fm-bootstrap: TANGLE problem line fires only for a feature branch and suppresses repair commands in detect-only mode'
+ok - fm-bootstrap: TANGLE problem line fires only for a feature branch and suppresses repair commands in detect-only mode
++ test_brief_assertion_precedes_branch
++ local home brief iso br
++ home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data
++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home
++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-brief.sh tangle-brief-cc3 alpha --mode no-mistakes
++ brief=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
++ assert_present /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md 'brief was not scaffolded'
++ '[' -e /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md ']'
++ assert_grep 'blocked: launched in primary checkout, not an isolated worktree' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md 'brief is missing the isolation blocked-status contract'
++ grep -F -- 'blocked: launched in primary checkout, not an isolated worktree' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
++ assert_grep 'The path check is authoritative' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md 'brief must make the path check authoritative'
++ grep -F -- 'The path check is authoritative' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
++ assert_no_grep 'A reliable test that you are in a linked worktree' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md 'brief must not present git-dir/common-dir as decisive'
++ grep -F -- 'A reliable test that you are in a linked worktree' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
++ assert_no_grep 'they are identical in the primary checkout' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md 'brief must not claim the primary checkout has identical git dirs'
++ grep -F -- 'they are identical in the primary checkout' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
+++ grep -n 'launched in primary checkout, not an isolated worktree' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
+++ head -1
+++ cut -d: -f1
++ iso=16
+++ grep -n 'git checkout -b fm/' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/brief-home/data/tangle-brief-cc3/brief.md
+++ head -1
+++ cut -d: -f1
++ br=18
++ '[' -z 16 ']'
++ '[' -z 18 ']'
++ '[' 16 -lt 18 ']'
++ pass 'fm-brief: ship brief asserts worktree isolation before the branch step'
++ printf 'ok - %s\n' 'fm-brief: ship brief asserts worktree isolation before the branch step'
+ok - fm-brief: ship brief asserts worktree isolation before the branch step
++ test_spawn_isolation_abort
++ local home proj fakebin out status
++ home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj
++ proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj
+++ make_spawn_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake
+++ fm_test_make_spawn_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake fakebin
+++ shift
++++ fm_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake
++++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
++++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
++++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ fm_test_fake_tmux_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ local fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin/tmux
+++ fm_fake_exit0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin treehouse
+++ local fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin tool
+++ shift
+++ for tool in '"$@"'
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin/treehouse
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home abort-notgit-dd4 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home id=abort-notgit-dd4 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home abort-notgit-dd4 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home id=abort-notgit-dd4 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/abort-notgit-dd4
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin abort-notgit-dd4 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh abort-notgit-dd4 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/abort-notgit-dd4/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get did not yield an isolated worktree (resolved '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit'\''; worktree root '\''none'\''; primary '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj'\''); refusing to launch to avoid tangling the primary checkout. Inspect target firstmate:fm-abort-notgit-dd4'
++ status=1
++ expect_code 1 1 'spawn into a non-worktree dir should abort'
++ local expected=1 actual=1 'label=spawn into a non-worktree dir should abort'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/abort-notgit-dd4/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get did not yield an isolated worktree (resolved '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-notgit'\''; worktree root '\''none'\''; primary '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj'\''); refusing to launch to avoid tangling the primary checkout. Inspect target firstmate:fm-abort-notgit-dd4' 'did not yield an isolated worktree' 'non-worktree spawn lacked the isolation error'
++ case "$1" in
++ :
++ assert_absent /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/state/abort-notgit-dd4.meta 'aborted spawn must not record meta'
++ '[' '!' -e /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/state/abort-notgit-dd4.meta ']'
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home abort-primary-ee5 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home id=abort-primary-ee5 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home abort-primary-ee5 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home id=abort-primary-ee5 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/abort-primary-ee5
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin abort-primary-ee5 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh abort-primary-ee5 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/abort-primary-ee5/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get did not yield an isolated worktree (resolved '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub'\''; worktree root '\''/private/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj'\''; primary '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj'\''); refusing to launch to avoid tangling the primary checkout. Inspect target firstmate:fm-abort-primary-ee5'
++ status=1
++ expect_code 1 1 'spawn landing inside the primary checkout should abort'
++ local expected=1 actual=1 'label=spawn landing inside the primary checkout should abort'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/abort-primary-ee5/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get did not yield an isolated worktree (resolved '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj/sub'\''; worktree root '\''/private/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj'\''; primary '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-proj'\''); refusing to launch to avoid tangling the primary checkout. Inspect target firstmate:fm-abort-primary-ee5' 'did not yield an isolated worktree' 'primary-checkout spawn lacked the isolation error'
++ case "$1" in
++ :
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home ok-isolated-ff6 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home id=ok-isolated-ff6 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home ok-isolated-ff6 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home id=ok-isolated-ff6 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/ok-isolated-ff6
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin ok-isolated-ff6 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh ok-isolated-ff6 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/ok-isolated-ff6/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned ok-isolated-ff6 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-ok-isolated-ff6 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt'
++ status=0
++ expect_code 0 0 'spawn into a genuine isolated worktree should succeed'
++ local expected=0 actual=0 'label=spawn into a genuine isolated worktree should succeed'
++ '[' 0 = 0 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/ok-isolated-ff6/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned ok-isolated-ff6 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-ok-isolated-ff6 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt' 'spawned ok-isolated-ff6' 'isolated spawn did not report success'
++ case "$1" in
++ :
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-home/data/ok-isolated-ff6/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned ok-isolated-ff6 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-ok-isolated-ff6 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-wt' 'did not yield an isolated worktree' 'isolated spawn wrongly tripped the guard'
++ case "$1" in
++ :
++ pass 'fm-spawn: aborts unless the resolved worktree is a genuine, isolated worktree'
++ printf 'ok - %s\n' 'fm-spawn: aborts unless the resolved worktree is a genuine, isolated worktree'
+ok - fm-spawn: aborts unless the resolved worktree is a genuine, isolated worktree
++ test_spawn_durable_worktree_claims
++ local home proj claimed free own alias broken recover fakebin rec out status
++ home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-claim-proj.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-claim-proj.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ claimed=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
++ free=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt
++ own=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt
++ alias=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-alias
++ broken=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt
++ ln -s /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-alias
++ ln -s /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-removed /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken
+++ make_spawn_record_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake fakebin
++++ fm_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake
++++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
++++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
++++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ cat
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin/tmux
+++ fm_fake_exit0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin treehouse
+++ local fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin tool
+++ shift
+++ for tool in '"$@"'
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin/treehouse
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
++ rec=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
++ :
++ echo window=firstmate:fm-incumbent
++ echo endpoint_task_id=incumbent
++ echo worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-alias/
++ echo project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ echo harness=codex
++ echo kind=ship
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ FM_FAKE_WINDOWS=fm-collision-gg7-fix
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home collision-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=collision-gg7 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home collision-gg7 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=collision-gg7 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin collision-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh collision-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task collision-gg7. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.'
++ status=1
++ expect_code 1 1 'spawn into another live task'\''s worktree should refuse'
++ local expected=1 actual=1 'label=spawn into another live task'\''s worktree should refuse'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task collision-gg7. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta' 'the collision refusal must name the owning task and the durable record it read'
++ case "$1" in
++ :
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task collision-gg7. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'does not prove a live worker' 'the refusal must not present a durable claim as proof that a worker is running'
++ case "$1" in
++ :
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task collision-gg7. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'leftover from an incomplete cleanup and must be removed' 'the refusal must tell the operator how to clear a stale claim'
++ case "$1" in
++ :
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task collision-gg7. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'claimed by live task' 'the refusal must not assert liveness the record cannot prove'
++ case "$1" in
++ :
++ assert_absent /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/collision-gg7.meta 'a collision refusal must not publish contender metadata'
++ '[' '!' -e /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/collision-gg7.meta ']'
++ assert_grep 'kill-window -t =firstmate:=fm-collision-gg7' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log 'a collision refusal must retire the new endpoint so treehouse can reallocate the slot'
++ grep -F -- 'kill-window -t =firstmate:=fm-collision-gg7' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
++ assert_no_grep 'send-keys -t firstmate:fm-collision-gg7 -l' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log 'a collision refusal must not type an agent launch command'
++ grep -F -- 'send-keys -t firstmate:fm-collision-gg7 -l' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task collision-gg7. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'survived the refusal' 'a retired endpoint must not be reported as a survivor, even beside a prefix-sharing sibling window'
++ case "$1" in
++ :
++ :
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ FM_FAKE_TMUX_KILL_FAIL=1
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home kill-failed-ii9 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=kill-failed-ii9 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home kill-failed-ii9 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=kill-failed-ii9 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/kill-failed-ii9
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin kill-failed-ii9 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh kill-failed-ii9 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/kill-failed-ii9/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task kill-failed-ii9. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.'
++ status=1
++ expect_code 1 1 'spawn into another live task'\''s worktree should refuse'
++ local expected=1 actual=1 'label=spawn into another live task'\''s worktree should refuse'
++ '[' 1 = 1 ']'
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/kill-failed-ii9/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task kill-failed-ii9. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'survived the refusal' 'a failed close must still read back an already-gone endpoint before warning'
++ case "$1" in
++ :
++ :
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ FM_FAKE_TMUX_KILL_NOOP=1
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home stuck-jj0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=stuck-jj0 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home stuck-jj0 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=stuck-jj0 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/stuck-jj0
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin stuck-jj0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh stuck-jj0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/stuck-jj0/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task stuck-jj0. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.
+warning: the new tmux endpoint firstmate:fm-stuck-jj0 named fm-stuck-jj0 survived the refusal of claimed worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\''; retire it before retrying task stuck-jj0, or the next spawn will refuse the leftover fm-stuck-jj0'
++ status=1
++ expect_code 1 1 'spawn into another live task'\''s worktree should refuse'
++ local expected=1 actual=1 'label=spawn into another live task'\''s worktree should refuse'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/stuck-jj0/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\'' is already claimed by task incumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta; refusing to launch task stuck-jj0. That record claims the worktree; it does not prove a live worker. If incumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.
+warning: the new tmux endpoint firstmate:fm-stuck-jj0 named fm-stuck-jj0 survived the refusal of claimed worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'\''; retire it before retrying task stuck-jj0, or the next spawn will refuse the leftover fm-stuck-jj0' 'endpoint firstmate:fm-stuck-jj0 named fm-stuck-jj0 survived' 'a surviving endpoint must be named so the operator can retire it'
++ case "$1" in
++ :
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home stuck-jj0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=stuck-jj0 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home stuck-jj0 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=stuck-jj0 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/stuck-jj0
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin stuck-jj0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh stuck-jj0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/stuck-jj0/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: window firstmate:fm-stuck-jj0 already exists'
++ status=1
++ expect_code 1 1 'the leftover endpoint should block the next attempt'
++ local expected=1 actual=1 'label=the leftover endpoint should block the next attempt'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/stuck-jj0/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: window firstmate:fm-stuck-jj0 already exists' 'window firstmate:fm-stuck-jj0 already exists' 'the endpoint the warning named is what refuses the retry'
++ case "$1" in
++ :
++ rm /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/incumbent.meta
++ :
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ FM_FAKE_WINDOWS=fm-collision-gg7-fix
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home collision-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=collision-gg7 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home collision-gg7 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=collision-gg7 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin collision-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh collision-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned collision-gg7 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-collision-gg7 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt'
++ status=0
++ expect_code 0 0 'the same spawn should be retryable after the durable claim retires'
++ local expected=0 actual=0 'label=the same spawn should be retryable after the durable claim retires'
++ '[' 0 = 0 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/collision-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned collision-gg7 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-collision-gg7 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-wt' 'spawned collision-gg7' 'the retry did not launch after the claim retired'
++ case "$1" in
++ :
++ echo window=firstmate:fm-broken-claim
++ echo worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken
++ echo project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ echo harness=codex
++ echo kind=ship
++ :
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home unresolvable-kk1 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=unresolvable-kk1 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home unresolvable-kk1 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=unresolvable-kk1 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/unresolvable-kk1
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin unresolvable-kk1 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh unresolvable-kk1 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/unresolvable-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: task broken-claim record /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/broken-claim.meta has worktree='\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken'\'', but that recorded path could not be resolved; refusing to launch task unresolvable-kk1 because an unresolvable claim is not evidence of a free worktree.'
++ status=1
++ expect_code 1 1 'an unresolvable foreign worktree claim should refuse'
++ local expected=1 actual=1 'label=an unresolvable foreign worktree claim should refuse'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/unresolvable-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: task broken-claim record /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/broken-claim.meta has worktree='\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken'\'', but that recorded path could not be resolved; refusing to launch task unresolvable-kk1 because an unresolvable claim is not evidence of a free worktree.' 'task broken-claim record /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/broken-claim.meta' 'the unresolvable-claim refusal did not name the owning record'
++ case "$1" in
++ :
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/unresolvable-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: task broken-claim record /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/broken-claim.meta has worktree='\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken'\'', but that recorded path could not be resolved; refusing to launch task unresolvable-kk1 because an unresolvable claim is not evidence of a free worktree.' 'worktree='\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken'\''' 'the unresolvable-claim refusal did not report the recorded path'
++ case "$1" in
++ :
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/unresolvable-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: task broken-claim record /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/broken-claim.meta has worktree='\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-broken'\'', but that recorded path could not be resolved; refusing to launch task unresolvable-kk1 because an unresolvable claim is not evidence of a free worktree.' 'could not be resolved; refusing to launch task unresolvable-kk1' 'the unresolvable-claim refusal did not explain why it stopped the spawn'
++ case "$1" in
++ :
++ assert_grep 'kill-window -t =firstmate:=fm-unresolvable-kk1' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log 'an unresolvable claim refusal must retire the endpoint it created'
++ grep -F -- 'kill-window -t =firstmate:=fm-unresolvable-kk1' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
++ recover=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt
++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home recover-ll2 brief
++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=recover-ll2 text=brief
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/recover-ll2
++ printf '%s\n' brief
++ echo window=firstmate:fm-recover-ll2
++ echo endpoint_task_id=recover-ll2
++ echo worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt/
++ echo project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ echo harness=codex
++ echo kind=ship
++ echo mode=no-mistakes
++ echo yolo=off
++ echo tasktmp=/tmp/fm-recover-ll2
++ echo model=default
++ echo effort=default
++ :
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ FM_FAKE_WINDOWS=fm-recover-ll2
+++ FM_FAKE_PANE_COMMAND=zsh
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin recover-ll2 --relaunch
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh recover-ll2 --relaunch
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/recover-ll2/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned recover-ll2 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-recover-ll2 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt/'
++ status=0
++ expect_code 0 0 'an unrelated unresolvable claim must not block relaunching a correctly recorded task'
++ local expected=0 actual=0 'label=an unrelated unresolvable claim must not block relaunching a correctly recorded task'
++ '[' 0 = 0 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/recover-ll2/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned recover-ll2 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-recover-ll2 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt/' 'spawned recover-ll2' 'the relaunch did not report success'
++ case "$1" in
++ :
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/recover-ll2/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned recover-ll2 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-recover-ll2 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-recover-wt/' 'could not be resolved' 'the relaunch must not refuse on another record'\''s unresolvable worktree value'
++ case "$1" in
++ :
++ rm /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/recover-ll2.meta
++ rm /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/broken-claim.meta
++ echo window=firstmate:fm-missing-claim
++ echo project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ echo harness=codex
++ echo kind=ship
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home free-hh8 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=free-hh8 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home free-hh8 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=free-hh8 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/free-hh8
+++ printf '%s\n' brief
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin free-hh8 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh free-hh8 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/free-hh8/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned free-hh8 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-free-hh8 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt'
++ status=0
++ expect_code 0 0 'a different, genuinely free worktree should remain launchable'
++ local expected=0 actual=0 'label=a different, genuinely free worktree should remain launchable'
++ '[' 0 = 0 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/free-hh8/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned free-hh8 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-free-hh8 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-free-wt' 'spawned free-hh8' 'the free-worktree spawn did not report success'
++ case "$1" in
++ :
++ rm /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state/missing-claim.meta
++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home own-ii9 brief
++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home id=own-ii9 text=brief
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/own-ii9
++ printf '%s\n' brief
++ echo window=firstmate:fm-own-ii9
++ echo endpoint_task_id=own-ii9
++ echo worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt/
++ echo project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-proj
++ echo harness=codex
++ echo kind=ship
++ echo mode=no-mistakes
++ echo yolo=off
++ echo tasktmp=/tmp/fm-own-ii9
++ echo model=default
++ echo effort=default
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim.log
+++ FM_FAKE_WINDOWS=fm-own-ii9
+++ FM_FAKE_PANE_COMMAND=zsh
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin own-ii9 --relaunch
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh own-ii9 --relaunch
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/own-ii9/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned own-ii9 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-own-ii9 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt/'
++ status=0
++ expect_code 0 0 'a relaunch into the task'\''s own recorded worktree should remain allowed'
++ local expected=0 actual=0 'label=a relaunch into the task'\''s own recorded worktree should remain allowed'
++ '[' 0 = 0 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/own-ii9/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned own-ii9 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-own-ii9 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt/' 'spawned own-ii9' 'the own-worktree relaunch did not report success'
++ case "$1" in
++ :
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-claim-home/data/own-ii9/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned own-ii9 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-own-ii9 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-own-wt/' 'is already claimed by task' 'the own-worktree relaunch treated its own metadata as a collision'
++ case "$1" in
++ :
++ pass 'fm-spawn: durable canonical worktree claims refuse collisions, release retries, and leave free slots launchable'
++ printf 'ok - %s\n' 'fm-spawn: durable canonical worktree claims refuse collisions, release retries, and leave free slots launchable'
+ok - fm-spawn: durable canonical worktree claims refuse collisions, release retries, and leave free slots launchable
++ test_spawn_claim_cleanup_retires_the_zellij_tab
++ local home proj claimed fakebin rec out status blocks
++ home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/data /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/state
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-zj-proj.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-zj-proj.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj
++ proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj
++ claimed=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt
+++ make_spawn_zellij_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake fakebin
++++ fm_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake
++++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
++++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
++++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
+++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
+++ cat
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin/zellij
+++ fm_fake_exit0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin treehouse
+++ local fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin tool
+++ shift
+++ for tool in '"$@"'
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin/treehouse
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
++ rec=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj.log
++ :
++ echo window=firstmate:9
++ echo worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt
++ echo project=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj
++ echo harness=codex
++ echo kind=ship
++ echo backend=zellij
++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home zj-collide-kk1 brief
++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home id=zj-collide-kk1 text=brief
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/data/zj-collide-kk1
++ printf '%s\n' brief
+++ FM_ZJ_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj.log
+++ FM_FAKE_ZJ_PANES_FAIL_AFTER_DUMPS=2
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin zj-collide-kk1 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj codex --backend zellij --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh zj-collide-kk1 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-proj codex --backend zellij --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/data/zj-collide-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt'\'' is already claimed by task zincumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/state/zincumbent.meta; refusing to launch task zj-collide-kk1. That record claims the worktree; it does not prove a live worker. If zincumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.'
++ status=1
++ expect_code 1 1 'a zellij spawn into a claimed worktree should refuse'
++ local expected=1 actual=1 'label=a zellij spawn into a claimed worktree should refuse'
++ '[' 1 = 1 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/data/zj-collide-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt'\'' is already claimed by task zincumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/state/zincumbent.meta; refusing to launch task zj-collide-kk1. That record claims the worktree; it does not prove a live worker. If zincumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'claimed by task zincumbent' 'the zellij collision refusal did not name the owning record'
++ case "$1" in
++ :
++ assert_grep 'close-tab-by-id 4' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj.log 'the claim cleanup must close the tab it created, using the tab id the spawn already holds'
++ grep -F -- 'close-tab-by-id 4' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj.log
++ assert_no_grep close-pane /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj.log 'closing only the pane leaves behind the empty tab that refuses the retry'
++ grep -F -- close-pane /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj.log
++ assert_not_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/data/zj-collide-kk1/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: allocated worktree '\''/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-wt'\'' is already claimed by task zincumbent in /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home/state/zincumbent.meta; refusing to launch task zj-collide-kk1. That record claims the worktree; it does not prove a live worker. If zincumbent has already finished, the record is a leftover from an incomplete cleanup and must be removed before this worktree can be used.' 'survived the refusal' 'a fully retired zellij endpoint must not be reported as a survivor'
++ case "$1" in
++ :
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-zj-home
+++ FM_ROOT_OVERRIDE=
+++ bash -c '
+      . "$0/bin/fm-backend.sh"
+      if fm_backend_endpoint_blocks_respawn zellij firstmate:7 fm-zj-collide-kk1; then
+        echo blocks=yes
+      else
+        echo blocks=no
+      fi
+    ' /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9
++ blocks=blocks=no
++ assert_contains blocks=no blocks=no 'the refused allocation must be retryable without manual cleanup'
++ case "$1" in
++ :
++ pass 'fm-spawn: a claim refusal retires the zellij tab it created, even when the pane lookup fails'
++ printf 'ok - %s\n' 'fm-spawn: a claim refusal retires the zellij tab it created, even when the pane lookup fails'
+ok - fm-spawn: a claim refusal retires the zellij tab it created, even when the pane lookup fails
++ test_spawn_tmux_window_construction
++ local home proj fakebin rec wt out status
++ home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home
++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/data
+++ make_repo /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj
+++ git init -q -b main /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj commit -q --allow-empty -m init
+++ fm_git_add_origin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj.origin.git
+++ local repo=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj remote=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj.origin.git remote_abs
+++ git clone --quiet --bare /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj.origin.git
++++ cd /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj.origin.git
++++ pwd
+++ remote_abs=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-rec-proj.origin.git
+++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj remote add origin file:///var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T/fm-tangle-guard.w7pMpB/spawn-rec-proj.origin.git
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj
++ proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj
+++ make_spawn_record_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake
+++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake fakebin
++++ fm_fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake
++++ local dir=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
++++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
++++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
+++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
+++ cat
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin/tmux
+++ fm_fake_exit0 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin treehouse
+++ local fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin tool
+++ shift
+++ for tool in '"$@"'
+++ cat
+++ chmod +x /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin/treehouse
+++ printf '%s\n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
++ fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
++ rec=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ :
++ wt=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt
++ git -C /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj worktree add -q --detach /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt
+++ run_spawn_record /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home rec-win-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home id=rec-win-gg7 proj=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin rec=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
+++ fm_test_spawn_brief /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home rec-win-gg7 brief
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home id=rec-win-gg7 text=brief
+++ mkdir -p /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/data/rec-win-gg7
+++ printf '%s\n' brief
+++ FM_TMUX_REC=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
+++ fm_test_run_spawn /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin rec-win-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj codex --mode no-mistakes --yolo off
+++ local home=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home pane=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt fakebin=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin
+++ shift 3
+++ FM_ROOT_OVERRIDE=
+++ FM_HOME=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home
+++ FM_STATE_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/state
+++ FM_DATA_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/data
+++ FM_PROJECTS_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/projects
+++ FM_CONFIG_OVERRIDE=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/config
+++ FM_SPAWN_NO_GUARD=1
+++ FM_FAKE_PANE_PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt
+++ TMUX=fake,1,0
+++ PATH=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-fake/fakebin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/X11/bin:/Library/Apple/usr/bin:/opt/homebrew/bin:/Users/omarali/.codex/packages/standalone/releases/0.147.0-aarch64-apple-darwin/codex-path:/usr/local/sbin:/etc/profiles/per-user/omarali/bin:/opt/homebrew/sbin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/Users/omarali/.local/bin:/Users/omarali/.nvm/versions/node/v22.21.1/bin:/Users/omarali/.codex/tmp/arg0/codex-arg0iBkw34:/Users/omarali/Library/pnpm:/Users/omarali/.lmstudio/bin:/Users/omarali/.lmstudio/bin
+++ /Users/omarali/.no-mistakes/worktrees/484358b7dc62/01M1FAVY53BRMP7Z8Q07HKRGP9/bin/fm-spawn.sh rec-win-gg7 /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-proj codex --mode no-mistakes --yolo off
++ out='warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/data/rec-win-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned rec-win-gg7 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-rec-win-gg7 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt'
++ status=0
++ expect_code 0 0 'spawn into a genuine worktree should succeed'
++ local expected=0 actual=0 'label=spawn into a genuine worktree should succeed'
++ '[' 0 = 0 ']'
++ assert_contains 'warning: /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-home/data/rec-win-gg7/brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+spawned rec-win-gg7 harness=codex kind=ship mode=no-mistakes yolo=off window=firstmate:fm-rec-win-gg7 worktree=/var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec-wt' 'spawned rec-win-gg7' 'recording spawn did not report success'
++ case "$1" in
++ :
++ assert_grep 'new-window -dP -F #{window_id} -t firstmate: -n fm-rec-win-gg7' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log 'new-window must append at the session (trailing colon) and capture the window id'
++ grep -F -- 'new-window -dP -F #{window_id} -t firstmate: -n fm-rec-win-gg7' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ assert_no_grep 'new-window -dP -F #{window_id} -t firstmate -n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log 'new-window must not target the bare session name (collides under base-index 1)'
++ grep -F -- 'new-window -dP -F #{window_id} -t firstmate -n' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ assert_grep 'set-window-option -t @spawnwid automatic-rename off' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log 'must disable automatic-rename on the spawned window'
++ grep -F -- 'set-window-option -t @spawnwid automatic-rename off' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ assert_grep 'set-window-option -t @spawnwid allow-rename off' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log 'must disable allow-rename on the spawned window'
++ grep -F -- 'set-window-option -t @spawnwid allow-rename off' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ assert_grep 'send-keys -t @spawnwid treehouse get Enter' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log 'treehouse get must be sent to the stable window id'
++ grep -F -- 'send-keys -t @spawnwid treehouse get Enter' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ assert_grep 'display-message -p -t @spawnwid #{pane_current_path}' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log 'the worktree wait loop must query the stable window id, not the name'
++ grep -F -- 'display-message -p -t @spawnwid #{pane_current_path}' /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB/spawn-rec.log
++ pass 'fm-spawn: appends windows by session-colon, pins the name, and targets the window id'
++ printf 'ok - %s\n' 'fm-spawn: appends windows by session-colon, pins the name, and targets the window id'
+ok - fm-spawn: appends windows by session-colon, pins the name, and targets the window id
++ fm_test_cleanup
++ local d
++ for d in '"${FM_TEST_CLEANUP_DIRS[@]:-}"'
++ '[' -n '' ']'
++ '[' -f /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//.fm-test-cleanup.81992.VwckT8 ']'
++ IFS=
++ read -r d
++ '[' -n /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB ']'
++ rm -rf /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//fm-tangle-guard.w7pMpB
++ IFS=
++ read -r d
++ rm -f /var/folders/2b/1c12ydjx3_gb17nw0dn28wc40000gn/T//.fm-test-cleanup.81992.VwckT8
